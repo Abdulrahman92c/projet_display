@@ -1,0 +1,79 @@
+/*reset  pour remettre à zero les pages car les navigateurs integrent deja du style au Html*/ 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+html{
+    font-size: 62.5%; /* 16 px * 62.5 % = 1.000 rem */
+}
+body{
+    font: 1.6rem 'Poppins', sans-serif;
+    margin: 0;
+    background-color:rgba(44, 62, 80,1.0)  ;
+}
+h1,h2,h3,h4,h5,p,ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+h1,h2,h3,h4,h5{
+    font-weight: 200;
+}
+img{
+    display: inline-block;
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;    
+}
+*{
+    box-sizing: border-box;  /* permet de faire un saut dans la reference et d'ajuster la taille*/
+}
+
+/*
+theme
+palette couleur de la page 
+la typo 
+....
+ */
+
+ :root{
+     --bgc-primary:rgb(33, 107, 156);
+     --bgc-secondary:rgba(142, 68, 173,1.0);
+     --bgc-last: rgba(22, 160, 133,1.0);
+      --color-text: #fff;
+ }
+
+ header h1, section h2{
+     line-height: 9.0rem;
+     text-align: center;
+     color: var(--color-text);
+     background-color: var(--bgc-primary);
+ }
+ 
+ main section{
+     max-width:90rem;
+     margin: 5rem auto;
+     padding: 1rem;
+     background-color: var(--bgc-primary);
+ }
+ section h2{
+     line-height: 6.0rem;
+     text-align: left;
+     padding-left: 1rem;
+ }
+section ul{
+    overflow: hidden;  /* permet de créer un masque */
+    padding: 1rem 0 0 1rem; /* permet de créer un espacement entre des images */
+
+}
+section ul li{
+    width: calc(100% / 4 - 1rem);
+    display: block;
+    float: left;
+    margin: 0 1rem 1rem 0; /* permet de créer un espacement entre des images */
+}
+section ul li:nth-of-type(5), section ul li:nth-of-type(6){
+    width: calc(100% / 2 - 1rem);
+}
+footer p{
+    text-align: center;
+    color: var(--color-text);
+}
